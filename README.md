@@ -54,8 +54,9 @@ The code is tested on **Python 3.10**.
 
 ```bash
 git clone https://github.com/yeates/PromptFix.git
-conda create -n PromptFix python=3.10 -y
 cd PromptFix
+conda create -n promptfix python=3.10 -y
+conda activate promptfix
 pip install -r requirements.txt
 ```
 

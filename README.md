@@ -50,7 +50,7 @@ Built on a diffusion model backbone, PromptFix delivers outstanding performance 
 
 ## Environment Setup
 
-The code is tested on **Python 3.10**.
+Follow the steps below to clone the repository, set up the environment, and install dependencies. The code is tested on **Python 3.10**.
 
 ```bash
 git clone https://github.com/yeates/PromptFix.git

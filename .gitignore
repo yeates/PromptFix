@@ -1,0 +1,7 @@
+__pycache__
+wandb/
+src/
+.vscode/
+checkpoints/
+__MACOSX/
+validation_results*

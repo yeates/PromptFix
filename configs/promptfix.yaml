@@ -1,0 +1,98 @@
+model:
+  base_learning_rate: 1.0e-05
+  weight_decay: 0.01
+  target: ldm.models.diffusion.ddpm_edit.LatentDiffusion
+  params:
+    fp16: True
+    deepspeed: 'deepspeed_1'
+    ckpt_path: checkpoints/stable-diffusion-v1/v1-5-pruned-emaonly.ckpt
+    linear_start: 0.00085
+    linear_end: 0.0120
+    num_timesteps_cond: 1
+    log_every_t: 200
+    timesteps: 1000
+    first_stage_key: edited
+    cond_stage_key: edit
+    image_size: 32
+    channels: 4
+    cond_stage_trainable: false   # Note: different from the one we trained before
+    conditioning_key: hybrid
+    monitor: val/loss_simple_ema
+    scale_factor: 0.18215
+    disable_hfp_loss: False # high-frequency preservation loss
+
+    scheduler_config: # 10000 warmup steps
+      target: ldm.lr_scheduler.LambdaLinearScheduler
+      params:
+        warm_up_steps: [ 0 ]
+        cycle_lengths: [ 10000000000000 ] # incredibly large number to prevent corner cases
+        f_start: [ 1.e-6 ]
+        f_max: [ 1. ]
+        f_min: [ 1. ]
+
+    unet_config:
+      target: ldm.modules.diffusionmodules.openaimodel.UNetModel
+      params:
+        image_size: 32 # unused
+        in_channels: 8
+        out_channels: 4
+        model_channels: 320
+        attention_resolutions: [ 4, 2, 1 ]
+        num_res_blocks: 2
+        channel_mult: [ 1, 2, 4, 4 ]
+        num_heads: 8
+        use_spatial_transformer: True
+        transformer_depth: 1
+        context_dim: 768
+        use_checkpoint: True
+        legacy: False
+        force_type_convert: True
+        disable_dual_context: False
+
+    first_stage_config:
+      target: ldm.models.autoencoder.AutoencoderKL
+      params:
+        embed_dim: 4
+        monitor: val/rec_loss
+        enable_decoder_cond_lora: True
+        ddconfig:
+          double_z: true
+          z_channels: 4
+          resolution: 256
+          in_channels: 3
+          out_ch: 3
+          ch: 128
+          ch_mult:
+          - 1
+          - 2
+          - 4
+          - 4
+          num_res_blocks: 2
+          attn_resolutions: []
+          dropout: 0.0
+        lossconfig:
+          target: torch.nn.Identity
+
+    cond_stage_config:
+      target: ldm.modules.encoders.modules.FrozenCLIPEmbedder
+
+data:
+  target: main.DataModuleFromConfig
+  params:
+    batch_size: 18
+    num_workers: 1
+    train:
+      ds1:
+        target: dataset.promptfix_data.PromptFixDataset
+        params:
+          data_dir: ./dataset/PromptfixData/data
+          resolution: 512
+          seed: 42
+
+trainer:
+  initial_scale: 13
+  max_epochs: 50
+  save_freq: 1
+  accumulate_grad_batches: 4
+  clip_grad: 0.0
+  optimizer: adamw

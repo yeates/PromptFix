@@ -1,0 +1,14 @@
+-e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+kornia==0.6
+git+https://github.com/crowsonkb/k-diffusion.git
+-e git+https://github.com/openai/CLIP.git@main#egg=clip
+deepspeed
+termcolor
+timm
+easydict
+omegaconf
+opencv-python
+transformers
+pyarrow
+pytorch-lightning==1.9.0
+pandas

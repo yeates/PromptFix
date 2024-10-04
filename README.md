@@ -34,7 +34,7 @@ Built on a diffusion model backbone, PromptFix delivers outstanding performance 
 </p>
 
 <p align="center">
-  <img src="examples/gif/vertical_scrolling_compressed.gif" style="width:50%;" />
+  <img src="examples/gif/vertical_scrolling_compressed.gif" style="width:55%;" />
 </p>
 
 ## Table of Contents
@@ -77,7 +77,6 @@ We curated a [training dataset](https://huggingface.co/datasets/yeates/Promptfix
 To download the dataset, run the following commands at the project root directory:
 
 ```bash
-sudo apt-get install git-lfs -y
 bash scripts/download_promptfix_dataset.sh
 ```
 

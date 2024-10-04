@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://s2.loli.net/2024/10/04/5SRkv6tC8jlOp3x.png" height="120">
+  <img src="examples/logo/promptfix-logo.png" height="140">
 </p>
 
 <h1 align="center">PromptFix: You Prompt and We Fix the Photo</h1>

@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://arxiv.org/pdf/2405.16785"><img src="https://img.shields.io/badge/Paper-arXiv-b31b1b.svg"></a>
   &nbsp;
-  <a href="/"><img src="https://img.shields.io/badge/Website-ProjectPage-A55D35"></a>
+  <a href="https://www.yongshengyu.com/PromptFix-Page/"><img src="https://img.shields.io/badge/Website-ProjectPage-A55D35"></a>
   &nbsp;
   <a href="https://huggingface.co/datasets/yeates/PromptfixData"><img src="https://img.shields.io/badge/Resource-Dataset-EFBF6A.svg"></a>
 </p>

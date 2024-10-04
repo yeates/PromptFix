@@ -34,7 +34,7 @@ Built on a diffusion model backbone, PromptFix delivers outstanding performance 
 </p>
 
 <p align="center">
-  <img src="examples/gif/vertical_scrolling_compressed.gif" width="75%" />
+  <img src="examples/gif/vertical_scrolling_compressed.gif" style="width:50%;" />
 </p>
 
 ## Table of Contents

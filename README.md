@@ -30,7 +30,7 @@ This repository provides the official PyTorch implementation of **PromptFix**, i
 Built on a diffusion model backbone, PromptFix delivers outstanding performance in correcting image defects while preserving the original structure, utilizing a 20-step denoising process. It also generalizes effectively across different aspect ratios.
 
 <p align="center">
-  <img src="examples/gif/horizontal_scrolling_compressed.gif" />
+  <img src="examples/gif/horizontal_scrolling_compressed.gif" style="width:90%;" />
 </p>
 
 <p align="center">

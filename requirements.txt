@@ -12,3 +12,5 @@ transformers
 pyarrow
 pytorch-lightning==1.9.0
 pandas
+monotonic
+# posthog  # developer-friendly, self-hosted product analytics. posthog-python is the python package

@@ -1,0 +1,13 @@
+{
+    "woman-window-dark-hand-preview.jpg": ["Enhance overall lighting of the image.", "The image shows a beautiful woman in front of a window, the room seems to be too dark"],
+    "woman-dark.jpg": ["Remove watermark from the image and enhance the lighting.", "The image contains many watermarks in a dark background"],
+    "gettyimage-1.jpg": ["Remove watermark from the image.", "The image contains a prominent watermark"],
+    "water-mark-1.jpg": ["Remove watermark from the image.", "The image contains a watermark"],    
+    "girl-bw-1.jpg": ["Enrich this photo with a myriad of colors.", "The image is a black-and-white photo"],
+    "portrait-dark-light-man-face-preview.jpg": ["Enhance overall lighting of the image.", "like to see this man in light background"],
+    "fuzzy-girl.jpeg": ["Remove woman from the image.", "like to see the background blocked by the woman"],
+    "girl-behind-leaf.jpg": ["Remove leaf that the girl is holding.", "like to see the complete image of the woman"],
+    "girl_field_chamomile_summer.jpg": ["Remove woman from the image.", "like to see the background blocked by the woman"],
+    "beautiful-girl-grass-2.jpg": ["Remove woman from the image.", "like to see the background blocked by the woman"],
+    "beautiful-girl-grass.jpg": ["Remove woman from the image.", "like to see the background blocked by the woman"]
+}

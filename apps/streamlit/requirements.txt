@@ -1,0 +1,10 @@
+# first install dependent pkgs from 
+# $PROMPTFIX_HOME/requirements.txt
+streamlit
+streamlit-aggrid
+pandas
+torch 
+einops 
+omegaconf 
+pillow 
+k-diffusion

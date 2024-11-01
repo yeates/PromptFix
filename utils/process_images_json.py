@@ -302,12 +302,11 @@ def main():
     parser.add_argument("--seed", default=2024, type=int)
     parser.add_argument("--disable_hf_guidance", type=bool, default=True)
     parser.add_argument("--enable-flaw-prompt", type=bool, default=True)
-    overwrite_outdir = True
-    parser.add_argument("--overwrite-outdir", type=bool, default=overwrite_outdir)
+    parser.add_argument("--overwrite-outdir", type=bool, default=False)
     # Add these arguments to workaround OOM error
-    max_resolution_default = 384  # 512 
+    max_resolution_default = 384  # 512
     parser.add_argument("--max-resolution", default=max_resolution_default, type=int, help="Maximum resolution for processing")
-    max_steps_default = 15 # 10  #  20
+    max_steps_default = 10  # 15 # 20
     parser.add_argument("--max-steps", default=max_steps_default, type=int, help="Maximum number of steps")    
     args = parser.parse_args()
     config = OmegaConf.load(args.config)

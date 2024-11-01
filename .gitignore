@@ -4,4 +4,5 @@ src/
 .vscode/
 checkpoints/
 __MACOSX/
-validation_results*
+# validation*
+docs/debug/*
